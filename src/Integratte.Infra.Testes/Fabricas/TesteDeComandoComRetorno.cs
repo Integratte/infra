@@ -1,6 +1,5 @@
 ﻿using Integratte.Infra.ModuloMediador;
 using Integratte.Infra.ModuloMediador.Comandos;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Integratte.Infra.Testes.Fabricas;
