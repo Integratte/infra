@@ -6,15 +6,14 @@ namespace Integratte.Infra.MediatR.Notificacoes
     {
         public string Mensagem { get; private set; }
         public bool PodeExibirMensagemParaUsuario { get; private set; }
-        public bool RequisicaoInvalida { get; private set; }
-        public bool ProvocaInterrupcaoDoSistema { get; private set; }
+        public TipoDeNotificacaoEnum TipoDeNotificacaoEnum { get; private set; }
 
-        public Notificacao(string mensagem, bool podeExibirParaUsuario, bool requisicaoInvalida, bool provocaInterrupcaoDoSistema)
+        public Notificacao(string mensagem, bool podeExibirParaUsuario, TipoDeNotificacaoEnum tipo)
         {
             Mensagem = mensagem;
             PodeExibirMensagemParaUsuario = podeExibirParaUsuario;
-            RequisicaoInvalida = requisicaoInvalida;
-            ProvocaInterrupcaoDoSistema = provocaInterrupcaoDoSistema;
+            TipoDeNotificacaoEnum = tipo;
+
         }
 
     }

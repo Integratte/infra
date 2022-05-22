@@ -25,9 +25,9 @@ public abstract class Mediador
 
     public bool SemImpedimentos => _notificacoes.SemImpedimentos;
     public INotificacao[] Notificacoes => _notificacoes.Listar;
-    public void AdicionarNotificacao(string mensagem, bool exibirParaUsuario = true, bool requisicaoInvalida = true, bool provocaInterrupcaoDoSistema = false)
+    public void AdicionarNotificacao(string mensagem, bool exibirParaUsuario = true, TipoDeNotificacaoEnum tipo = TipoDeNotificacaoEnum.RequisicaoInvalida)
     {
-        _notificacoes.Adicionar(mensagem, exibirParaUsuario, requisicaoInvalida, provocaInterrupcaoDoSistema);
+        _notificacoes.Adicionar(mensagem, exibirParaUsuario, tipo);
 
     }
 

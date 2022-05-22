@@ -1,4 +1,5 @@
-﻿using Integratte.Infra.Testes.Fabricas;
+﻿using Integratte.Infra.ModuloMediador.Notificacoes;
+using Integratte.Infra.Testes.Fabricas;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Threading.Tasks;
 
@@ -22,7 +23,7 @@ public class TestesDeNotificacoes
     public async Task UmaNotificacaoQueProvocaInterrupcaoNaoDevePermitirMaisAcoesNoMediador()
     {
         var mediador = FabricaDeDependencias.Criar().Mediador;
-        mediador.AdicionarNotificacao("Notificação que provoca interrupção", exibirParaUsuario: false, requisicaoInvalida: true, provocaInterrupcaoDoSistema: true);
+        mediador.AdicionarNotificacao("Notificação que provoca interrupção", exibirParaUsuario: false, TipoDeNotificacaoEnum.ErroDoSistema);
 
         //Tentativa de publicar evento, o mesmo não deve ocorrer.
         Assert.IsFalse(await TesteDeEvento.Testar(mediador));
