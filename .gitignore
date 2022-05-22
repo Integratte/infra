@@ -1,0 +1,7 @@
+﻿/.vs
+/src/Integratte.Infra/obj
+/src/Integratte.Infra/bin
+/src/Integratte.Infra.Testes/bin
+/src/Integratte.Infra.Testes/obj
+/src/Integratte.Infra.MediatR/bin
+/src/Integratte.Infra.MediatR/obj
