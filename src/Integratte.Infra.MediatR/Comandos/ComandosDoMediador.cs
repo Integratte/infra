@@ -13,17 +13,29 @@ internal class ComandosDoMediador : IComandosDoMediador
 
     }
 
-    private async Task ExecutarComando(Comando? comando)
-    {
-        if (comando == null) return;
-
-        await _mediator.Publish(comando);
-
-    }
 
     public async Task Executar(IComando comando)
     {
         await ExecutarComando(comando as Comando);
+
+    }
+    private async Task ExecutarComando(Comando? comando)
+    {
+        if (comando == null) return;
+        await _mediator.Publish(comando);
+
+    }
+
+
+    public async Task<RetornoT?> Executar<RetornoT>(IComando<RetornoT> comando) where RetornoT : IRetornoDoComando
+    {
+        return await ExecutarComando(comando as Comando<RetornoT>);
+
+    }
+    public async Task<RetornoT?> ExecutarComando<RetornoT>(Comando<RetornoT>? comando) where RetornoT : IRetornoDoComando
+    {
+        if (comando == null) return default;
+        return await _mediator.Send(comando);
 
     }
 

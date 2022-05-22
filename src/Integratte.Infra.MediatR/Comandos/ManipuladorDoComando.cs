@@ -12,3 +12,16 @@ public abstract class ManipuladorDoComando<ComandoManipulado> : IManipuladorDoCo
     public abstract Task Manipular(ComandoManipulado evento);
 
 }
+
+
+public abstract class ManipuladorDoComando<ComandoManipulado, RetornoDoComando> : IRequestHandler<ComandoManipulado, RetornoDoComando> where RetornoDoComando : IRetornoDoComando where ComandoManipulado : Comando<RetornoDoComando>
+{
+    public async Task<RetornoDoComando> Handle(ComandoManipulado comando, CancellationToken cancellationToken)
+    {
+        return await Manipular(comando);
+
+    }
+
+    public abstract Task<RetornoDoComando> Manipular(ComandoManipulado comando);
+
+}

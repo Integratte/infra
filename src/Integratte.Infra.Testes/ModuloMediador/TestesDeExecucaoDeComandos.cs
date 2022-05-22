@@ -15,4 +15,12 @@ public class TestesDeExecucaoDeComandos
 
     }
 
+    [TestMethod]
+    public async Task VerificarSeComandoComRetornoFoiExecutado()
+    {
+        var mediador = FabricaDeDependencias.Criar().Mediador;
+        Assert.IsTrue(await TesteDeComandoComRetorno.Testar(mediador));
+
+    }
+
 }

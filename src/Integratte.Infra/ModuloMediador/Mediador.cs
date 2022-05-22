@@ -17,12 +17,17 @@ public abstract class Mediador
         _comandos = comandos;
     }
 
+    #region Notificações
+
+    public bool SemImpedimentos => _notificacoes.SemImpedimentos;
     public INotificacao[] Notificacoes => _notificacoes.Listar;
     public void AdicionarNotificacao(string mensagem, bool exibirParaUsuario = true, bool requisicaoInvalida = true, bool provocaInterrupcaoDoSistema = false)
     {
         _notificacoes.Adicionar(mensagem, exibirParaUsuario, requisicaoInvalida, provocaInterrupcaoDoSistema);
 
     }
+
+    #endregion
 
     public async Task PublicarEvento(IEvento evento)
     {
@@ -41,5 +46,14 @@ public abstract class Mediador
         await _comandos.Executar(comando);
 
     }
+    public async Task<RetornoT?> ExecutarComando<RetornoT>(IComando<RetornoT> comando) where RetornoT : IRetornoDoComando
+    {
+        if (_notificacoes.FoiInterrompido)
+            return default;
+
+        return await _comandos.Executar(comando);
+
+    }
+
 
 }
