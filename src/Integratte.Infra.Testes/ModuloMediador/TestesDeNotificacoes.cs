@@ -25,7 +25,7 @@ public class TestesDeNotificacoes
         mediador.AdicionarNotificacao("Notificação que provoca interrupção", exibirParaUsuario: false, requisicaoInvalida: true, provocaInterrupcaoDoSistema: true);
 
         //Tentativa de publicar evento, o mesmo não deve ocorrer.
-        Assert.IsFalse(await FabricaDeTesteEvento.Testar(mediador));
+        Assert.IsFalse(await TesteDeEvento.Testar(mediador));
 
     }
 

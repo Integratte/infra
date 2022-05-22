@@ -11,7 +11,7 @@ public class TestesDePublicacaoDeEventos
     public async Task VerificarSeEventoFoiPublicado()
     {
         var mediador = FabricaDeDependencias.Criar().Mediador;
-        Assert.IsTrue(await FabricaDeTesteEvento.Testar(mediador));
+        Assert.IsTrue(await TesteDeEvento.Testar(mediador));
 
     }
 

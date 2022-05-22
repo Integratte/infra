@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Integratte.Infra.Testes.Fabricas;
 
-internal class FabricaDeTesteEvento
+internal class TesteDeEvento2
 {
-    private const string NotificacaoDeConfirmacaoDePublicacao = "Teste de Evento Publicado";
+    private const string CONFIRMACAO_DE_PUBLICACAO = "Teste de Evento Publicado";
 
     public static async Task<bool> Testar(Mediador mediador)
     {
@@ -16,31 +16,32 @@ internal class FabricaDeTesteEvento
 
     }
 
-    private static Evento CriarEvento() { return new TesteDeEvento(); }
+    private static Evento CriarEvento() { return new EventoTeste(); }
     private static bool EventoFoiPublicado(Mediador mediador)
     {
         var notificacoes = mediador.Notificacoes;
-        return notificacoes.Any(x => x.Mensagem == NotificacaoDeConfirmacaoDePublicacao);
+        return notificacoes.Any(x => x.Mensagem == CONFIRMACAO_DE_PUBLICACAO);
 
     }
 
-    private class TesteDeEvento : Evento { }
-    private class ManipuladorDoTesteDeEvento : ManipuladorDoEvento<TesteDeEvento>
+    private class EventoTeste : Evento { }
+    private class ManipuladorDeEventoTeste : ManipuladorDoEvento<EventoTeste>
     {
         private readonly Mediador _mediador;
 
-        public ManipuladorDoTesteDeEvento(Mediador mediador)
+        public ManipuladorDeEventoTeste(Mediador mediador)
         {
             _mediador = mediador;
 
         }
 
-        public override Task Manipular(TesteDeEvento evento)
+        public override Task Manipular(EventoTeste evento)
         {
-            _mediador.AdicionarNotificacao(NotificacaoDeConfirmacaoDePublicacao);
+            _mediador.AdicionarNotificacao(CONFIRMACAO_DE_PUBLICACAO);
             return Task.CompletedTask;
 
         }
+
     }
 
 }
