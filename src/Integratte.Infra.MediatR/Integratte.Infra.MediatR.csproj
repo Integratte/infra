@@ -1,18 +1,45 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>0.1.0-beta</Version>
+		<Authors>Fillippe Prata</Authors>
+		<Title>Integratte.Infra.MediatR</Title>
+		<Company>Integratte</Company>
+		<PackageProjectUrl>https://github.com/Integratte/infra/wiki</PackageProjectUrl>
+		<Description>Implementação do Mediador Integratte com o MediatR</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<PackageTags>Integratte;Infra;</PackageTags>
+		<PackageReleaseNotes>Esta versão inclui a implementação do módulo "Mediador" do Integratte.Infra. Este módulo facilita a execução/publicação de comandos, consultas, eventos e notificações conforme o padrão Mediator e Observer.</PackageReleaseNotes>
+		<NeutralLanguage>pt-BR</NeutralLanguage>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Copyright>Integratte | GPL-3.0 license</Copyright>
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageIcon>Ícone Integratte.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="MediatR" Version="10.0.1" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-  </ItemGroup>
+	<ItemGroup>
+	  <None Include="..\..\Ícone Integratte.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Integratte.Infra" Version="0.1.0-beta" />
+		<PackageReference Include="MediatR" Version="10.0.1" />
+		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
