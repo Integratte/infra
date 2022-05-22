@@ -1,40 +1,41 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <Version>0.1.0-beta</Version>
-    <Authors>Fillippe Prata</Authors>
-	<Title>Integratte.Infra</Title>
-    <Company>Integratte</Company>
-    <PackageProjectUrl>https://github.com/Integratte/infra/wiki</PackageProjectUrl>
-    <Description>Código reutilizável para camada de infra de aplicações .NET</Description>
-    <PackageIcon>Ícone Integratte.png</PackageIcon>
-    <PackageReadmeFile>README.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
-    <RepositoryType>github</RepositoryType>
-    <PackageTags>Integratte;Infra;</PackageTags>
-    <PackageReleaseNotes>Esta versão inclui o módulo "Mediador" que facilita a execução/publicação de comandos, consultas, eventos e notificações conforme o padrão Mediator e Observer. Este módulo possui sua abstração no projeto Integratte.Infra e sua implementação no projeto Integratte.Infra.MediatR, pois sua implementação utiliza a biblioteca MediatR para a lógica dos padrões Mediator e Observer. Para unir o Mediador Integratte com a biblioteca MediatR foi utilizado o padrão Adapter.</PackageReleaseNotes>
-    <NeutralLanguage>pt-BR</NeutralLanguage>
-    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-    <Copyright>Integratte | GPL-3.0 license</Copyright>
-    <PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>0.1.0-beta.1</Version>
+		<Authors>Fillippe Prata</Authors>
+		<Title>Integratte.Infra</Title>
+		<Company>Integratte</Company>
+		<PackageProjectUrl>https://github.com/Integratte/infra/wiki</PackageProjectUrl>
+		<Description>Código reutilizável para camada de infra de aplicações .NET</Description>
+		<PackageIcon>Ícone Integratte.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<PackageTags>Integratte;Infra;</PackageTags>
+		<PackageReleaseNotes>Alteração de notificações incluindo o enum de Tipo de Notificação: Erro, Atenção, Informação, Requisição Inválida.</PackageReleaseNotes>
+		<NeutralLanguage>pt-BR</NeutralLanguage>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Copyright>Integratte | GPL-3.0 license</Copyright>
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Include="..\..\README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="..\..\Ícone Integratte.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\..\Ícone Integratte.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+	</ItemGroup>
 
 </Project>

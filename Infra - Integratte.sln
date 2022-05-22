@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Configuracoes", "_Configur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.MediatR", "src\Integratte.Infra.MediatR\Integratte.Infra.MediatR.csproj", "{B3295C2A-7FCB-4DF5-8102-850B21902673}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integratte.Infra.TestesDeApi", "src\Integratte.Infra.TestesDeApi\Integratte.Infra.TestesDeApi.csproj", "{BF365334-7D7B-4B6A-AE4D-C1F4B280CCAC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{B3295C2A-7FCB-4DF5-8102-850B21902673}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3295C2A-7FCB-4DF5-8102-850B21902673}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3295C2A-7FCB-4DF5-8102-850B21902673}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF365334-7D7B-4B6A-AE4D-C1F4B280CCAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF365334-7D7B-4B6A-AE4D-C1F4B280CCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF365334-7D7B-4B6A-AE4D-C1F4B280CCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF365334-7D7B-4B6A-AE4D-C1F4B280CCAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
