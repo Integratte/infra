@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Integratte.Infra.Testes.Fabricas;
 
-internal class TesteDeEvento2
+internal class TesteDeEvento
 {
     private const string CONFIRMACAO_DE_PUBLICACAO = "Teste de Evento Publicado";
 

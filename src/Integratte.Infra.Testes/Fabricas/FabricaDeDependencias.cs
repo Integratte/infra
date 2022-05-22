@@ -31,7 +31,6 @@ internal class FabricaDeDependencias
 
     private static void AdicionarTodasAsDependencias(ServiceCollection serviceCollection)
     {
-        serviceCollection.AdicionarDependenciasDeInfra();
         serviceCollection.AdicionarDependenciasMediatR();
         serviceCollection.CarregarAssembliesMediatR(typeof(FabricaDeDependencias).Assembly);
     }
