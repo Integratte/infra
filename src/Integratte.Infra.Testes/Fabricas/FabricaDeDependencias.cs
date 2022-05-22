@@ -33,6 +33,7 @@ internal class FabricaDeDependencias
     {
         serviceCollection.AdicionarDependenciasMediatR();
         serviceCollection.CarregarAssembliesMediatR(typeof(FabricaDeDependencias).Assembly);
+
     }
 
     public static Mediador ObterMediadorDoProvedor(ServiceProvider provedor)
