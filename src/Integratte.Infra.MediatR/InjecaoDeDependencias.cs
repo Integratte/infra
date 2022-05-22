@@ -1,8 +1,10 @@
 ﻿using Integratte.Infra.MediatR.Comandos;
+using Integratte.Infra.MediatR.Consultas;
 using Integratte.Infra.MediatR.Eventos;
 using Integratte.Infra.MediatR.Notificacoes;
 using Integratte.Infra.ModuloMediador;
 using Integratte.Infra.ModuloMediador.Comandos;
+using Integratte.Infra.ModuloMediador.Consultas;
 using Integratte.Infra.ModuloMediador.Eventos;
 using Integratte.Infra.ModuloMediador.Notificacoes;
 using MediatR;
@@ -20,6 +22,7 @@ namespace Integratte.Infra.MediatR
             services.AddScoped<NotificacoesDoMediador, NotificacoesDoMediadorImp>();
             services.AddScoped<IEventosDoMediador, EventosDoMediador>();
             services.AddScoped<IComandosDoMediador, ComandosDoMediador>();
+            services.AddScoped<IConsultasDoMediador, ConsultasDoMediador>();
 
         }
 

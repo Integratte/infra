@@ -1,4 +1,5 @@
 ﻿using Integratte.Infra.ModuloMediador.Comandos;
+using Integratte.Infra.ModuloMediador.Consultas;
 using Integratte.Infra.ModuloMediador.Eventos;
 using Integratte.Infra.ModuloMediador.Notificacoes;
 
@@ -9,12 +10,15 @@ public abstract class Mediador
     protected readonly NotificacoesDoMediador _notificacoes;
     protected readonly IEventosDoMediador _eventos;
     protected readonly IComandosDoMediador _comandos;
+    protected readonly IConsultasDoMediador _consultas;
 
-    protected Mediador(NotificacoesDoMediador notificacoes, IEventosDoMediador eventos, IComandosDoMediador comandos)
+    protected Mediador(NotificacoesDoMediador notificacoes, IEventosDoMediador eventos, IComandosDoMediador comandos, IConsultasDoMediador consultas)
     {
         _notificacoes = notificacoes;
         _eventos = eventos;
         _comandos = comandos;
+        _consultas = consultas;
+
     }
 
     #region Notificações
@@ -55,5 +59,13 @@ public abstract class Mediador
 
     }
 
+    public async Task<RetornoT?> Consultar<RetornoT>(IConsulta<RetornoT> consulta) where RetornoT : IRetornoDaConsulta
+    {
+        if (_notificacoes.FoiInterrompido)
+            return default;
+
+        return await _consultas.Consultar(consulta);
+
+    }
 
 }
