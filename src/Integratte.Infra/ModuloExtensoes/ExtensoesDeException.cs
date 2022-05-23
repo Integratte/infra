@@ -1,4 +1,4 @@
-﻿namespace Integratte.Infra.ModuloExcecoes;
+﻿namespace Integratte.Infra.ModuloExtensoes;
 
 public static class ExtensoesDeException
 {

@@ -1,4 +1,4 @@
-﻿namespace Integratte.Infra.ExcecoesPersonalizadas;
+﻿namespace Integratte.Infra.ModuloExcecoesPersonalizadas;
 
 public class ErroDeProgramacao : Exception
 {

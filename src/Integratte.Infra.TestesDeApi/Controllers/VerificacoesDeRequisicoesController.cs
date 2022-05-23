@@ -1,8 +1,8 @@
-﻿using Integratte.Infra.ModuloMediador;
+﻿using Integratte.Infra.ModuloExcecoesPersonalizadas;
+using Integratte.Infra.ModuloMediador;
 using Integratte.Infra.ModuloMediador.Notificacoes;
-using Microsoft.AspNetCore.Mvc;
 using Integratte.Infra.WebApi.Controller;
-using Integratte.Infra.ExcecoesPersonalizadas;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Integratte.Infra.TestesDeApi.Controllers;
 

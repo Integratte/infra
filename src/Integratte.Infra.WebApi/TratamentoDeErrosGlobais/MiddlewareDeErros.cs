@@ -1,5 +1,5 @@
-﻿using Integratte.Infra.ExcecoesPersonalizadas;
-using Integratte.Infra.ModuloExcecoes;
+﻿using Integratte.Infra.ModuloExcecoesPersonalizadas;
+using Integratte.Infra.ModuloExtensoes;
 using Integratte.Infra.ModuloMediador;
 using Integratte.Infra.ModuloMediador.Notificacoes;
 using Integratte.Infra.WebApi.Controller;

@@ -1,5 +1,5 @@
-﻿using Integratte.Infra.ExcecoesPersonalizadas;
-using Integratte.Infra.MediatR;
+﻿using Integratte.Infra.MediatR;
+using Integratte.Infra.ModuloExcecoesPersonalizadas;
 using Integratte.Infra.ModuloMediador;
 using Microsoft.Extensions.DependencyInjection;
 
