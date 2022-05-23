@@ -1,7 +1,7 @@
 ﻿using Integratte.Infra.ModuloMediador;
 using Integratte.Infra.ModuloMediador.Notificacoes;
-using Integratte.Infra.ModuloWebApi;
 using Microsoft.AspNetCore.Mvc;
+using Integratte.Infra.WebApi.Controller;
 
 namespace Integratte.Infra.TestesDeApi.Controllers;
 

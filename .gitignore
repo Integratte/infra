@@ -7,3 +7,5 @@
 /src/Integratte.Infra.MediatR/obj
 /src/Integratte.Infra.TestesDeApi/bin
 /src/Integratte.Infra.TestesDeApi/obj
+/src/Integratte.Infra.WebApi/bin
+/src/Integratte.Infra.WebApi/obj

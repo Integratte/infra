@@ -2,7 +2,7 @@
 using Integratte.Infra.ModuloMediador.Notificacoes;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Integratte.Infra.ModuloWebApi;
+namespace Integratte.Infra.WebApi.Controller;
 
 public class ControllerApiBase : ControllerBase
 {

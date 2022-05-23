@@ -6,4 +6,4 @@ Módulo que facilita a execução/publicação de comandos, consultas, eventos e
 Este módulo possui sua abstração no projeto Integratte.Infra e sua implementação no projeto Integratte.Infra.MediatR, pois sua implementação utiliza a biblioteca MediatR para a lógica dos padrões Mediator e Observer. Para unir o Mediador Integratte com a biblioteca MediatR foi utilizado o padrão Adapter.
 
 ## Web Api
-Módulo com uma classe base para controllers de API facilitando o tratamento de notificações e respostas adequadas das requisições.
+Módulo implementado no projeto Integratte.Infra.WebApi com uma classe base para controllers de API facilitando o tratamento de notificações e respostas adequadas das requisições.

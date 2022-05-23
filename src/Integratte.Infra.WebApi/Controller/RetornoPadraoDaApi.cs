@@ -1,6 +1,6 @@
 ﻿using Integratte.Infra.ModuloMediador.Notificacoes;
 
-namespace Integratte.Infra.ModuloWebApi;
+namespace Integratte.Infra.WebApi.Controller;
 
 public class RetornoPadraoDaApi<T> where T : new()
 {
