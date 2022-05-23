@@ -2,6 +2,7 @@
 using Integratte.Infra.ModuloMediador.Consultas;
 using Integratte.Infra.ModuloMediador.Eventos;
 using Integratte.Infra.ModuloMediador.Notificacoes;
+using Microsoft.Extensions.Configuration;
 
 namespace Integratte.Infra.ModuloMediador;
 
@@ -12,8 +13,12 @@ public abstract class Mediador
     protected readonly IComandosDoMediador _comandos;
     protected readonly IConsultasDoMediador _consultas;
 
-    protected Mediador(NotificacoesDoMediador notificacoes, IEventosDoMediador eventos, IComandosDoMediador comandos, IConsultasDoMediador consultas)
+    public IConfiguration Configuration { get; }
+
+    protected Mediador(IConfiguration configuration, NotificacoesDoMediador notificacoes, IEventosDoMediador eventos, IComandosDoMediador comandos, IConsultasDoMediador consultas)
     {
+        Configuration = configuration;
+
         _notificacoes = notificacoes;
         _eventos = eventos;
         _comandos = comandos;
