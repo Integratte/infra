@@ -53,6 +53,14 @@ public class VerificacoesDeRequisicoesController : ControllerApiBase
     }
 
     [HttpGet]
+    [Route("Status500DeErroGlobal")]
+    public ActionResult<RetornoPadraoDaApi> Status500DeErroGlobal()
+    {
+        throw new Exception("Este é um erro global lançado propositalmente.");
+
+    }
+
+    [HttpGet]
     [Route("Status400")]
     public ActionResult<RetornoPadraoDaApi> Status400()
     {

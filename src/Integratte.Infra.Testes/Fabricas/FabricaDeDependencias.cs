@@ -38,7 +38,7 @@ internal class FabricaDeDependencias
 
     public static Mediador ObterMediadorDoProvedor(ServiceProvider provedor)
     {
-        return provedor.GetService<Mediador>() ?? throw new System.Exception();//todo: Alterar Exception
+        return provedor.GetService<Mediador>() ?? throw new System.Exception();
 
     }
 

@@ -1,8 +1,15 @@
 using Integratte.Infra.TestesDeApi;
+using Integratte.Infra.WebApi.TratamentoDeErrosGlobais;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Host.UseSerilog((context, config) =>
+{
+    config.ReadFrom.Configuration(context.Configuration);
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -28,7 +35,7 @@ app.UseCors(x => x
        .AllowAnyHeader()
     );
 
-//app.UseMiddleware(typeof(MiddlewareDeErros));
+app.UseMiddleware(typeof(MiddlewareDeErros));
 
 app.UseAuthentication();
 app.UseAuthorization();
