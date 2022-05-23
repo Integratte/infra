@@ -1,5 +1,7 @@
-﻿using Integratte.Infra.ModuloExcecoes;
+﻿using Integratte.Infra.ExcecoesPersonalizadas;
+using Integratte.Infra.ModuloExcecoes;
 using Integratte.Infra.ModuloMediador;
+using Integratte.Infra.ModuloMediador.Notificacoes;
 using Integratte.Infra.WebApi.Controller;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
@@ -23,11 +25,12 @@ public class MiddlewareDeErros
     public async Task Invoke(HttpContext context, Mediador mediador)
     {
         try { await _next(context); }
+        catch (ErroDeProgramacao ex) { await TratarExcecao(context, ex, mediador, erroPersonalizado: true); }
         catch (Exception ex) { await TratarExcecao(context, ex, mediador); }
 
     }
 
-    private Task TratarExcecao(HttpContext context, Exception ex, Mediador mediador)
+    private Task TratarExcecao(HttpContext context, Exception ex, Mediador mediador, bool erroPersonalizado = false)
     {
         ErroDTO erro;
 
@@ -43,17 +46,17 @@ public class MiddlewareDeErros
         {
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
-            if (environment != "Development")
-                erro = new ErroDTO($"Tivemos um problema, por favor, verique os logs.");
-            else
+            if (erroPersonalizado || environment == "Development")
                 erro = new ErroDTO(ex.InnerExceptionRaiz(), ex);
+            else
+                erro = new ErroDTO($"Tivemos um problema, por favor, verique os logs.");
 
         }
 
         void NotificarELogar()
         {
             var referencia = $"Ref.: {erro.Id}";
-            mediador.AdicionarNotificacao($"{erro.Mensagem} - {referencia}", exibirParaUsuario: false);
+            mediador.AdicionarNotificacao($"{erro.Mensagem} - {referencia}", exibirParaUsuario: false, TipoDeNotificacaoEnum.ErroDoSistema);
 
             string erroDetalhado = $"{CodigoDeErro} - {referencia} - {ex.InnerExceptionRaiz()}";
             _logger.LogError(erroDetalhado);

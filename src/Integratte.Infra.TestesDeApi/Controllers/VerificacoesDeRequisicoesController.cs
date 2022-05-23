@@ -2,6 +2,7 @@
 using Integratte.Infra.ModuloMediador.Notificacoes;
 using Microsoft.AspNetCore.Mvc;
 using Integratte.Infra.WebApi.Controller;
+using Integratte.Infra.ExcecoesPersonalizadas;
 
 namespace Integratte.Infra.TestesDeApi.Controllers;
 
@@ -49,6 +50,14 @@ public class VerificacoesDeRequisicoesController : ControllerApiBase
     {
         _mediador.AdicionarNotificacao("Erro do Sistema com status 500 :)", exibirParaUsuario: true, TipoDeNotificacaoEnum.ErroDoSistema);
         return SemResposta();
+
+    }
+
+    [HttpGet]
+    [Route("Status500DeErroGlobalComExcecaoPersonalizada")]
+    public ActionResult<RetornoPadraoDaApi> Status500DeErroGlobalComExcecaoPersonalizada()
+    {
+        throw new ErroDeProgramacao("Este é um erro global personalizado lançado propositalmente.");
 
     }
 

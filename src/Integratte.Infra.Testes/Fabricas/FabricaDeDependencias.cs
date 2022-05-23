@@ -1,4 +1,5 @@
-﻿using Integratte.Infra.MediatR;
+﻿using Integratte.Infra.ExcecoesPersonalizadas;
+using Integratte.Infra.MediatR;
 using Integratte.Infra.ModuloMediador;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -38,7 +39,7 @@ internal class FabricaDeDependencias
 
     public static Mediador ObterMediadorDoProvedor(ServiceProvider provedor)
     {
-        return provedor.GetService<Mediador>() ?? throw new System.Exception();
+        return provedor.GetService<Mediador>() ?? throw new ErroDeProgramacao("Não foi configurado uma injeção para o Mediador.");
 
     }
 
