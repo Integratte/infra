@@ -1,0 +1,11 @@
+{
+  "ConfiguracoesDeEmail": {
+    "EnderecoDeEnvio": "email.de.envio@dominio.com",
+    "SenhaDoEnderecoDeEnvio": "123QWE!@#",
+    "NomeDoEnderecoDeEnvio": "Notificador da Empresa",
+    "HostSmtp": "smtp.office365.com",
+    "PortaSmtp": 587,
+    "SslHabilitado": true
+  }
+
+}

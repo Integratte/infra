@@ -6,6 +6,7 @@ namespace Integratte.Infra.TestesDeApi
     {
         public static IServiceCollection IncluirDependenciasDoProjeto(this IServiceCollection services)
         {
+            services.AdicionarDependenciasInfra();
             services.AdicionarDependenciasMediatR();
             return services;
 
