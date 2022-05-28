@@ -1,21 +1,25 @@
-﻿namespace Integratte.Infra.ModuloClassesDeTipos;
+﻿using Integratte.Infra.ModuloExtensoes;
+
+namespace Integratte.Infra.ModuloClassesDeTipos;
 
 public class CPF
 {
-    private string _cpfRecebido;
-    private CPF(string cpf) { _cpfRecebido = cpf; CpfValido = ValidarSeCpfEValido(); }
+    private readonly string _cpfRecebido;
+    private CPF(string cpf) { _cpfRecebido = cpf; Valido = ValidarSeCpfEValido(); }
 
-    public bool CpfValido { get; private set; }
-    public bool CpfInvalido => !CpfValido;
+    public ulong Numero => Convert.ToUInt64(_cpfRecebido);
+    public string Texto => ToString();
+    public bool Valido { get; private set; }
+    public bool Invalido => !Valido;
 
-    public static CPF Criar(int cpf)
+    public static CPF Criar(ulong cpf)
     {
         return new(cpf.ToString().PadLeft(11, '0'));
 
     }
     public static CPF Criar(string cpf)
     {
-        return new(cpf);
+        return new(cpf.SomenteNumeros());
 
     }
 
@@ -54,6 +58,34 @@ public class CPF
             resto = 11 - resto;
         digito += resto.ToString();
         return cpf.EndsWith(digito);
+
+    }
+
+    public override string ToString()
+    {
+        return Numero.ToString(@"000\.000\.000\-00");
+
+    }
+
+    public override bool Equals(object? obj)
+    {
+        return obj is CPF cpf && Numero == cpf.Numero;
+
+    }
+
+    public static bool operator ==(CPF cpf1, CPF cpf2)
+    {
+        return cpf1.Equals(cpf2);
+    }
+
+    public static bool operator !=(CPF cpf1, CPF cpf2)
+    {
+        return !cpf1.Equals(cpf2);
+    }
+
+    public override int GetHashCode()
+    {
+        return Convert.ToInt32(_cpfRecebido.Substring(0, _cpfRecebido.Length - 2));
 
     }
 

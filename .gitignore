@@ -9,3 +9,5 @@
 /src/Integratte.Infra.TestesDeApi/obj
 /src/Integratte.Infra.WebApi/bin
 /src/Integratte.Infra.WebApi/obj
+/src/Integratte.Infra.EntityFramework/bin
+/src/Integratte.Infra.EntityFramework/obj
