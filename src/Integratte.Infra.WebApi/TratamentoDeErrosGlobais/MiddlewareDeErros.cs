@@ -47,7 +47,7 @@ public class MiddlewareDeErros
             var environment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 
             if (erroPersonalizado || environment == "Development")
-                erro = new ErroDTO(ex.InnerExceptionRaiz(), ex);
+                erro = new ErroDTO(ex.TextoAteExceptionRaiz(), ex);
             else
                 erro = new ErroDTO($"Tivemos um problema, por favor, verique os logs.");
 
@@ -58,7 +58,7 @@ public class MiddlewareDeErros
             var referencia = $"Ref.: {erro.Id}";
             mediador.AdicionarNotificacao($"{erro.Mensagem} - {referencia}", exibirParaUsuario: false, TipoDeNotificacaoEnum.ErroDoSistema);
 
-            string erroDetalhado = $"{CodigoDeErro} - {referencia} - {ex.InnerExceptionRaiz()}";
+            string erroDetalhado = $"{CodigoDeErro} - {referencia} - {ex.TextoAteExceptionRaiz()}";
             _logger.LogError(erroDetalhado);
 
         }

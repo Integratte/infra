@@ -8,6 +8,12 @@ public static class ExtensoesDeString
 
     }
 
+    public static bool ContemValor(this string? texto)
+    {
+        return !texto.NuloOuVazio();
+
+    }
+
     public static string SomenteLetrasOuNumeros(this string texto)
     {
         return new string(texto.ToArray().Where(x => char.IsLetterOrDigit(x)).ToArray());

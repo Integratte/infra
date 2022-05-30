@@ -2,7 +2,7 @@
 
 public static class ExtensoesDeException
 {
-    public static string InnerExceptionRaiz(this Exception ex)
+    public static string TextoAteExceptionRaiz(this Exception ex)
     {
         var innerExceptionMessages = ex.Message;
         Exception? innerExceptionTemp = ex.InnerException;
