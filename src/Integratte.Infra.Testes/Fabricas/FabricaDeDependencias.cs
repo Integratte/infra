@@ -1,4 +1,6 @@
-﻿using Integratte.Infra.MediatR;
+﻿using Integratte.Infra.Cache;
+using Integratte.Infra.Cache.EmMemoria;
+using Integratte.Infra.MediatR;
 using Integratte.Infra.ModuloEmails;
 using Integratte.Infra.ModuloExcecoesPersonalizadas;
 using Integratte.Infra.ModuloMediador;
@@ -11,18 +13,26 @@ internal class FabricaDeDependencias
 {
     public Mediador Mediador { get; private set; }
     public EnvioDeEmail EnvioDeEmail { get; private set; }
+    public ICacheEmMemoria CacheEmMemoria { get; private set; }
 
     private FabricaDeDependencias()
     {
         var provedor = ObterProvedorCompartilhado();
         EnvioDeEmail = ObterEnvioDeEmailDoProvedor();
         Mediador = ObterMediadorDoProvedor(provedor);
+        CacheEmMemoria = ObterCacheEmMemoria();
 
         #region SubMétodos
 
         EnvioDeEmail ObterEnvioDeEmailDoProvedor()
         {
             return provedor.GetService<EnvioDeEmail>() ?? throw new ErroDeProgramacao("Não foi configurado uma injeção para o EnvioDeEmail.");
+
+        }
+
+        ICacheEmMemoria ObterCacheEmMemoria()
+        {
+            return provedor.GetService<ICacheEmMemoria>() ?? throw new ErroDeProgramacao("Não foi configurado uma injeção para o ICacheEmMemoria.");
 
         }
 
@@ -49,6 +59,7 @@ internal class FabricaDeDependencias
         var configuration = ConfigurationMock.Criar();
         serviceCollection.AddSingleton(s => configuration);
         serviceCollection.AdicionarDependenciasInfra();
+        serviceCollection.AdicionarDependenciasDeCache();
         serviceCollection.AdicionarDependenciasMediatR();
         serviceCollection.CarregarAssembliesMediatR(typeof(FabricaDeDependencias).Assembly);
 

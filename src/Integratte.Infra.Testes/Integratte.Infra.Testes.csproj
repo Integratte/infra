@@ -44,6 +44,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Integratte.Infra.Cache\Integratte.Infra.Cache.csproj" />
     <ProjectReference Include="..\Integratte.Infra.EntityFramework\Integratte.Infra.EntityFramework.csproj" />
     <ProjectReference Include="..\Integratte.Infra.MediatR\Integratte.Infra.MediatR.csproj" />
     <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />

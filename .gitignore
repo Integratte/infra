@@ -11,3 +11,5 @@
 /src/Integratte.Infra.WebApi/obj
 /src/Integratte.Infra.EntityFramework/bin
 /src/Integratte.Infra.EntityFramework/obj
+/src/Integratte.Infra.Cache/bin
+/src/Integratte.Infra.Cache/obj
