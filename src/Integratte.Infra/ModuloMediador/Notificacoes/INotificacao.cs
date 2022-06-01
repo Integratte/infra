@@ -3,7 +3,7 @@
 public interface INotificacao
 {
     string Mensagem { get; }
-    bool PodeExibirMensagemParaUsuario { get; }
+    bool PodeExibirParaUsuario { get; }
     TipoDeNotificacaoEnum TipoDeNotificacaoEnum { get; }
     string DescricaoDoTipoDeNotificacao { get; }
 

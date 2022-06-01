@@ -5,6 +5,8 @@ using Newtonsoft.Json.Serialization;
 using Serilog;
 using Integratte.Infra.WebApi.JWT;
 using Microsoft.OpenApi.Models;
+using Integratte.Infra.TestesDeApi.ModuloHttp;
+using Integratte.Infra.ModuloHttp;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -64,6 +66,9 @@ var app = builder.Build();
 #region Customizado - App
 
 app.UseMiddleware(typeof(MiddlewareDeErros));
+
+var chamadaHttp = app.Services.GetRequiredService<ChamadaHttp>();
+TokenParaApiDeTestes.Criar(chamadaHttp);
 
 #endregion
 

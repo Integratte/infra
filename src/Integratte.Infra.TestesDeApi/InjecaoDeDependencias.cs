@@ -1,4 +1,5 @@
 ﻿using Integratte.Infra.MediatR;
+using Integratte.Infra.RestSharp;
 
 namespace Integratte.Infra.TestesDeApi
 {
@@ -8,6 +9,7 @@ namespace Integratte.Infra.TestesDeApi
         {
             services.AdicionarDependenciasInfra();
             services.AdicionarDependenciasMediatR();
+            services.AdicionarDependenciasRestSharp();
             return services;
 
         }

@@ -13,3 +13,5 @@
 /src/Integratte.Infra.EntityFramework/obj
 /src/Integratte.Infra.Cache/bin
 /src/Integratte.Infra.Cache/obj
+/src/Integratte.Infra.RestSharp/obj
+/src/Integratte.Infra.RestSharp/bin

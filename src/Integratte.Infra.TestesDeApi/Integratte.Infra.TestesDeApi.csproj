@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Integratte.Infra.MediatR\Integratte.Infra.MediatR.csproj" />
+    <ProjectReference Include="..\Integratte.Infra.RestSharp\Integratte.Infra.RestSharp.csproj" />
     <ProjectReference Include="..\Integratte.Infra.WebApi\Integratte.Infra.WebApi.csproj" />
     <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />
   </ItemGroup>

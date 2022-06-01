@@ -1,8 +1,8 @@
 {
   "ConfiguracoesDeEmail": {
-    "EnderecoDeEnvio": "email.de.envio@dominio.com",
-    "SenhaDoEnderecoDeEnvio": "123QWE!@#",
-    "NomeDoEnderecoDeEnvio": "Notificador da Empresa",
+    "EnderecoDeEnvio": "notificacoes@integratte.com",
+    "SenhaDoEnderecoDeEnvio": "P@ssw0rd.!@2",
+    "NomeDoEnderecoDeEnvio": "Notificador Integratte",
     "HostSmtp": "smtp.office365.com",
     "PortaSmtp": 587,
     "SslHabilitado": true

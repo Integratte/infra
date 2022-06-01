@@ -25,7 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testes", "Testes", "{66E440
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.EntityFramework", "src\Integratte.Infra.EntityFramework\Integratte.Infra.EntityFramework.csproj", "{3ACFD5F7-C84B-4D74-8A18-24D77F8A7A19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integratte.Infra.Cache", "src\Integratte.Infra.Cache\Integratte.Infra.Cache.csproj", "{A3C03F8B-B747-495E-A3D5-EBB78FC7CDC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.Cache", "src\Integratte.Infra.Cache\Integratte.Infra.Cache.csproj", "{A3C03F8B-B747-495E-A3D5-EBB78FC7CDC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integratte.Infra.RestSharp", "src\Integratte.Infra.RestSharp\Integratte.Infra.RestSharp.csproj", "{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,10 @@ Global
 		{A3C03F8B-B747-495E-A3D5-EBB78FC7CDC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3C03F8B-B747-495E-A3D5-EBB78FC7CDC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3C03F8B-B747-495E-A3D5-EBB78FC7CDC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
