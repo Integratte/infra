@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>0.1.0-beta.1</Version>
+		<Version>1.0.0</Version>
 		<Authors>Fillippe Prata</Authors>
 		<Title>Integratte.Infra.MediatR</Title>
 		<Company>Integratte</Company>
@@ -14,7 +14,7 @@
 		<RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
 		<RepositoryType>github</RepositoryType>
 		<PackageTags>Integratte;Infra;</PackageTags>
-		<PackageReleaseNotes>Alteração de notificações incluindo o enum de Tipo de Notificação: Erro, Atenção, Informação, Requisição Inválida. Este projeto contém a implementação do módulo "Mediador" do Integratte.Infra. Este módulo facilita a execução/publicação de comandos, consultas, eventos e notificações conforme o padrão Mediator e Observer.</PackageReleaseNotes>
+		<PackageReleaseNotes>Publicação da primeira versão oficial e associação a nova versão do Integratte.Infra.</PackageReleaseNotes>
 		<NeutralLanguage>pt-BR</NeutralLanguage>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Copyright>Integratte | GPL-3.0 license</Copyright>
@@ -30,12 +30,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="Integratte.Infra" Version="1.0.0" />
 		<PackageReference Include="MediatR" Version="10.0.1" />
 		<PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

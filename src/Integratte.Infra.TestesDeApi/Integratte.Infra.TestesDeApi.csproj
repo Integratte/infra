@@ -7,17 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Integratte.Infra" Version="1.0.0" />
+    <PackageReference Include="Integratte.Infra.MediatR" Version="1.0.0" />
+    <PackageReference Include="Integratte.Infra.RestSharp" Version="1.0.0" />
+    <PackageReference Include="Integratte.Infra.WebApi" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.5" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Integratte.Infra.MediatR\Integratte.Infra.MediatR.csproj" />
-    <ProjectReference Include="..\Integratte.Infra.RestSharp\Integratte.Infra.RestSharp.csproj" />
-    <ProjectReference Include="..\Integratte.Infra.WebApi\Integratte.Infra.WebApi.csproj" />
-    <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />
   </ItemGroup>
 
 </Project>

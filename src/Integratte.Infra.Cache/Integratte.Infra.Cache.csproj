@@ -1,14 +1,44 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Version>1.0.0</Version>
+		<Authors>Fillippe Prata</Authors>
+		<Title>Integratte.Infra.Cache</Title>
+		<Company>Integratte</Company>
+		<PackageProjectUrl>https://github.com/Integratte/infra/wiki</PackageProjectUrl>
+		<Description>Abstrações e implementações para gerenciamento de cache.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
+		<RepositoryType>github</RepositoryType>
+		<PackageTags>Integratte;Infra;</PackageTags>
+		<PackageReleaseNotes>Publicação da primeira versão oficial.</PackageReleaseNotes>
+		<NeutralLanguage>pt-BR</NeutralLanguage>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Copyright>Integratte | GPL-3.0 license</Copyright>
+		<PackageLicenseExpression>AGPL-3.0-or-later</PackageLicenseExpression>
+		<PackageIcon>Ícone Integratte.png</PackageIcon>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
-    <PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="..\..\Ícone Integratte.png" Link="Ícone Integratte.png">
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+		<PackageReference Include="System.Runtime.Caching" Version="4.7.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="README.md">
+			<PackagePath>\</PackagePath>
+			<Pack>True</Pack>
+		</None>
+	</ItemGroup>
 
 </Project>

@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>0.1.0-beta.1</Version>
+		<Version>1.0</Version>
 		<Authors>Fillippe Prata</Authors>
 		<Title>Integratte.Infra</Title>
 		<Company>Integratte</Company>
@@ -15,7 +15,7 @@
 		<RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
 		<RepositoryType>github</RepositoryType>
 		<PackageTags>Integratte;Infra;</PackageTags>
-		<PackageReleaseNotes>Alteração de notificações incluindo o enum de Tipo de Notificação: Erro, Atenção, Informação, Requisição Inválida.</PackageReleaseNotes>
+		<PackageReleaseNotes>Publicação da versão 1.0 com classes de tipo, gerenciamento de e-mail, exceções personalizadas, extensões diversas, mediador, módulo http, etc.</PackageReleaseNotes>
 		<NeutralLanguage>pt-BR</NeutralLanguage>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Copyright>Integratte | GPL-3.0 license</Copyright>

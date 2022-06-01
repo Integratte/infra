@@ -26,6 +26,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Integratte.Infra" Version="1.0.0" />
+    <PackageReference Include="Integratte.Infra.Cache" Version="1.0.0" />
+    <PackageReference Include="Integratte.Infra.EntityFramework" Version="1.0.0" />
+    <PackageReference Include="Integratte.Infra.MediatR" Version="1.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
       <PrivateAssets>all</PrivateAssets>
@@ -41,13 +45,6 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Integratte.Infra.Cache\Integratte.Infra.Cache.csproj" />
-    <ProjectReference Include="..\Integratte.Infra.EntityFramework\Integratte.Infra.EntityFramework.csproj" />
-    <ProjectReference Include="..\Integratte.Infra.MediatR\Integratte.Infra.MediatR.csproj" />
-    <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />
   </ItemGroup>
 
 </Project>

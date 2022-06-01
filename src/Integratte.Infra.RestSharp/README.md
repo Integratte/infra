@@ -1,0 +1,2 @@
+# Integratte.Infra.RestSharp
+No projeto Integratte.Infra há uma abstração de chamadas http que é implementada no projeto Integratte.Infra.RestSharp, pois utilizamos a biblioteca RestSharp para gerenciar as chamadas Http abstraídas.
