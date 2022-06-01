@@ -1,0 +1,11 @@
+{
+  "ConfiguracoesDeEmail": {
+    "EnderecoDeEnvio": "email.de.envio@dominio.com",
+    "SenhaDoEnderecoDeEnvio": "SenhaSegura",
+    "NomeDoEnderecoDeEnvio": "Nome do Endereço de E-mail",
+    "HostSmtp": "smtp.office365.com",
+    "PortaSmtp": 587,
+    "SslHabilitado": true
+  }
+
+}

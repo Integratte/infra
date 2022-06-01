@@ -21,7 +21,7 @@ internal sealed class EnvioDeEmailComSystemNet : EnvioDeEmail
     {
         try
         {
-            var emailSettings = new ConfigurationBuilder().AddJsonFile("emailSettings.json").Build();
+            var emailSettings = new ConfigurationBuilder().AddJsonFile("email.settings.json").Build();
 
             var configuracoes = emailSettings.GetSection("configuracoesDeEmail").Get<ConfiguracoesDeEmail>();
             if (configuracoes == null)
