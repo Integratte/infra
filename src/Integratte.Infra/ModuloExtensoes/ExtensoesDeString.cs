@@ -16,12 +16,16 @@ public static class ExtensoesDeString
 
     public static string SomenteLetrasOuNumeros(this string texto)
     {
+        if (texto.NuloOuVazio()) return "";
+
         return new string(texto.ToArray().Where(x => char.IsLetterOrDigit(x)).ToArray());
 
     }
 
     public static string SomenteNumeros(this string texto)
     {
+        if (texto.NuloOuVazio()) return "";
+
         return new string(texto.ToArray().Where(x => char.IsNumber(x)).ToArray());
 
     }
