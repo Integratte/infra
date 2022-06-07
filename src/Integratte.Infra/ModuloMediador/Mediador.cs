@@ -29,6 +29,7 @@ public abstract class Mediador
     #region Notificações
 
     public bool SemImpedimentos => _notificacoes.SemImpedimentos;
+    public bool ComImpedimentos => !_notificacoes.SemImpedimentos;
     public INotificacao[] Notificacoes => _notificacoes.Listar;
     public void AdicionarNotificacao(string mensagem, bool exibirParaUsuario = true, TipoDeNotificacaoEnum tipo = TipoDeNotificacaoEnum.RequisicaoInvalida)
     {
