@@ -36,4 +36,16 @@ public static class ExtensoesDeString
 
     }
 
+    public static int ToInt32(this string value)
+    {
+        return Convert.ToInt32(value);
+
+    }
+
+    public static long ToInt64(this string value)
+    {
+        return Convert.ToInt64(value);
+
+    }
+
 }
