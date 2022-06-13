@@ -42,7 +42,7 @@ public static class ExtensoesDeString
 
     }
 
-    public static int ToInt64(this string value)
+    public static long ToInt64(this string value)
     {
         return Convert.ToInt64(value);
 
