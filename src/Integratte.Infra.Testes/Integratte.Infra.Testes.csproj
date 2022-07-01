@@ -8,12 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="appsettings.json" />
-    <None Remove="email.settings.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="email.settings.json">
+    <Content Include="App_Config\email.settings.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
@@ -26,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Integratte.Infra" Version="1.0.0" />
     <PackageReference Include="Integratte.Infra.Cache" Version="1.0.0" />
     <PackageReference Include="Integratte.Infra.EntityFramework" Version="1.0.0" />
     <PackageReference Include="Integratte.Infra.MediatR" Version="1.0.0" />
@@ -45,6 +39,10 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Integratte.Infra\Integratte.Infra.csproj" />
   </ItemGroup>
 
 </Project>
