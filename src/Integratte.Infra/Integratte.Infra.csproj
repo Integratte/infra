@@ -4,7 +4,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<Version>1.0.1</Version>
+		<Version>1.0.2</Version>
 		<Authors>Fillippe Prata</Authors>
 		<Title>Integratte.Infra</Title>
 		<Company>Integratte</Company>
@@ -15,7 +15,7 @@
 		<RepositoryUrl>https://github.com/Integratte/infra</RepositoryUrl>
 		<RepositoryType>github</RepositoryType>
 		<PackageTags>Integratte;Infra;</PackageTags>
-		<PackageReleaseNotes>Pequenas correções/implementações -> Inclusão de propriedade "ComImpedimentos" no mediador. Conversão de string para int através de extensão. Tratamento de string nula ou vazia antes de filtrar por somente letras ou números de uma string (extensão). Normalização do método executar de uma chamada http (síncrono e assíncrono)</PackageReleaseNotes>
+		<PackageReleaseNotes>Configurações específicas dentro de pasta de configuração (por exemplo, "App_Config/email.settings.json").</PackageReleaseNotes>
 		<NeutralLanguage>pt-BR</NeutralLanguage>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Copyright>Integratte | GPL-3.0 license</Copyright>

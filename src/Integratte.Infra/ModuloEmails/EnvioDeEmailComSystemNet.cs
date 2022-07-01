@@ -1,4 +1,5 @@
-﻿using Integratte.Infra.ModuloExcecoesPersonalizadas;
+﻿using Integratte.Infra.ModuloConfiguracoes;
+using Integratte.Infra.ModuloExcecoesPersonalizadas;
 using Integratte.Infra.ModuloExtensoes;
 using Integratte.Infra.ModuloMediador.Notificacoes;
 using Microsoft.Extensions.Configuration;
@@ -10,18 +11,24 @@ namespace Integratte.Infra.ModuloEmails;
 internal sealed class EnvioDeEmailComSystemNet : EnvioDeEmail
 {
     private readonly ConfiguracoesDeEmail _configuracoesDeEmail;
+    private readonly IConfiguracoes _configuracoes;
 
-    public EnvioDeEmailComSystemNet()
+    public EnvioDeEmailComSystemNet(IConfiguracoes configuracoes)
     {
+        _configuracoes = configuracoes;
         _configuracoesDeEmail = Carregar_configuracoesDeEmail();
 
     }
 
-    private static ConfiguracoesDeEmail Carregar_configuracoesDeEmail()
+    private ConfiguracoesDeEmail Carregar_configuracoesDeEmail()
     {
         try
         {
-            var emailSettings = new ConfigurationBuilder().AddJsonFile("email.settings.json").Build();
+            var diretorio = "";
+            if (_configuracoes.PastaDeConfiguracoes.ContemValor())
+                diretorio = Directory.GetCurrentDirectory() + _configuracoes.PastaDeConfiguracoes;
+
+            var emailSettings = new ConfigurationBuilder().AddJsonFile($"{diretorio}email.settings.json").Build();
 
             var configuracoes = emailSettings.GetSection("configuracoesDeEmail").Get<ConfiguracoesDeEmail>();
             if (configuracoes == null)
