@@ -15,3 +15,7 @@
 /src/Integratte.Infra.Cache/obj
 /src/Integratte.Infra.RestSharp/obj
 /src/Integratte.Infra.RestSharp/bin
+/src/Integratte.JWT/obj
+/src/Integratte.JWT/bin
+/src/Integratte.Infra.JWT/bin/Debug/net6.0
+/src/Integratte.Infra.JWT/obj

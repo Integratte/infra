@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.EntityFram
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.Cache", "src\Integratte.Infra.Cache\Integratte.Infra.Cache.csproj", "{A3C03F8B-B747-495E-A3D5-EBB78FC7CDC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integratte.Infra.RestSharp", "src\Integratte.Infra.RestSharp\Integratte.Infra.RestSharp.csproj", "{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.RestSharp", "src\Integratte.Infra.RestSharp\Integratte.Infra.RestSharp.csproj", "{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Integratte.Infra.JWT", "src\Integratte.Infra.JWT\Integratte.Infra.JWT.csproj", "{2F6A7128-FED6-448E-80CD-6DFA368EA23B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +69,10 @@ Global
 		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC2D2D41-948D-43C5-8F71-7D8C4C68B2A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F6A7128-FED6-448E-80CD-6DFA368EA23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F6A7128-FED6-448E-80CD-6DFA368EA23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F6A7128-FED6-448E-80CD-6DFA368EA23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F6A7128-FED6-448E-80CD-6DFA368EA23B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

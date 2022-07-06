@@ -37,6 +37,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\Integratte.Infra.JWT\Integratte.Infra.JWT.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<None Update="README.md">
 			<PackagePath>\</PackagePath>
 			<Pack>True</Pack>
